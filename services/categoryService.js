@@ -29,8 +29,10 @@ const deleteCategory = async (id, userId) => {
   if (!category) throw new Error('Category not found');
   if (category.userId.toString() !== userId) throw new Error('Unauthorized');
 
-  await category.remove();
+  // 👇 fix this line:
+  await category.deleteOne();
 };
+
 
 module.exports = {
   createCategory,
