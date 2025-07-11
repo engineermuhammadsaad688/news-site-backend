@@ -6,8 +6,8 @@ const addComment = async (req, res) => {
       ...req.body,
       userId: req.user.id
     };
-    const comment = await commentService.addComment(data);
-    res.status(201).json(comment);
+    const result = await commentService.addComment(data);
+    res.status(201).json(result);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
@@ -15,9 +15,9 @@ const addComment = async (req, res) => {
 
 const getComments = async (req, res) => {
   try {
-    const articleId = req.query.articleId;
-    const comments = await commentService.getComments(articleId);
-    res.json(comments);
+    const id = req.query.articleId;
+    const result = await commentService.getComments(id);
+    res.json(result);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -25,8 +25,12 @@ const getComments = async (req, res) => {
 
 const updateComment = async (req, res) => {
   try {
-    const updated = await commentService.updateComment(req.params.id, req.user.id, req.body);
-    res.json(updated);
+    const data = {
+      ...req.body,
+    };
+    const id = req.params.id
+    const result = await commentService.updateComment(id,data);
+    res.json(result);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }

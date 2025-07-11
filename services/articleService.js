@@ -7,29 +7,29 @@ const createArticle = async (data) => {
 };
 
 const getAllArticles = async () => {
-  return await Article.find().populate('userId', 'name').populate('categoryId', 'name');
+  const result =await Article.find();
+  return result
 };
 
 const getArticleById = async (id) => {
-  return await Article.findById(id).populate('userId', 'name').populate('categoryId', 'name');
+  
+  const result =await Article.findById(id).populate('userId', 'name').populate('categoryId', 'name');
+
+  return result
 };
 
-const updateArticle = async (id, userId, updatedData) => {
-  const article = await Article.findById(id);
-  if (!article) throw new Error('Article not found');
-  if (article.userId.toString() !== userId) throw new Error('Unauthorized');
+const updateArticle = async (id,data) => {
+  
+  const result = await Article.findByIdAndUpdate(id, data, { new: true });
 
-  Object.assign(article, updatedData);
-  await article.save();
-  return article;
+  return result;
 };
 
-const deleteArticle = async (id, userId) => {
-  const article = await Article.findById(id);
-  if (!article) throw new Error('Article not found');
-  if (article.userId.toString() !== userId) throw new Error('Unauthorized');
+const deleteArticle = async (id) => {
+  
+  const result = await Article.findByIdAndDelete(id);
 
-  await article.remove();
+  return result;
 };
 
 module.exports = {

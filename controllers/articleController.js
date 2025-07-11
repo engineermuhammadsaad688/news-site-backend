@@ -5,11 +5,10 @@ const createArticle = async (req, res) => {
   try {
     const data = {
       ...req.body,
-      userId: req.user.id,
-      image: req.file ? req.file.filename : null // multer se milta hai
+      image:req.file.filename
     };
-    const article = await articleService.createArticle(data);
-    res.status(201).json(article);
+    const result = await articleService.createArticle(data);
+    res.status(201).json(result);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
@@ -18,8 +17,8 @@ const createArticle = async (req, res) => {
 
 const getAllArticles = async (req, res) => {
   try {
-    const articles = await articleService.getAllArticles();
-    res.json(articles);
+    const result = await articleService.getAllArticles();
+    res.json(result);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -27,9 +26,10 @@ const getAllArticles = async (req, res) => {
 
 const getArticleById = async (req, res) => {
   try {
-    const article = await articleService.getArticleById(req.params.id);
-    if (!article) return res.status(404).json({ error: 'Article not found' });
-    res.json(article);
+
+    const id = req.params.id
+    const result = await articleService.getArticleById(id);
+    res.json(result);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -37,8 +37,13 @@ const getArticleById = async (req, res) => {
 
 const updateArticle = async (req, res) => {
   try {
-    const updated = await articleService.updateArticle(req.params.id, req.user.id, req.body);
-    res.json(updated);
+    const data = {
+      ...req.body,
+      image: req.file ? req.file.filename : req.body.image
+    };
+    const id = req.params.id
+    const result = await articleService.updateArticle(id, data);
+    res.json(result);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
@@ -46,8 +51,9 @@ const updateArticle = async (req, res) => {
 
 const deleteArticle = async (req, res) => {
   try {
-    await articleService.deleteArticle(req.params.id, req.user.id);
-    res.json({ message: 'Article deleted' });
+    const id = req.params.id
+    const result = await articleService.deleteArticle(id);
+    res.json(result);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }

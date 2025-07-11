@@ -14,23 +14,15 @@ const getCategoryById = async (id) => {
   return await Category.findById(id).populate('userId', 'name');
 };
 
-const updateCategory = async (id, userId, updatedData) => {
-  const category = await Category.findById(id);
-  if (!category) throw new Error('Category not found');
-  if (category.userId.toString() !== userId) throw new Error('Unauthorized');
-
-  Object.assign(category, updatedData);
-  await category.save();
-  return category;
+const updateCategory = async (id,data) => {
+  const result = await Category.findByIdAndUpdate(id, data, { new: true });
+  return result;
 };
 
-const deleteCategory = async (id, userId) => {
-  const category = await Category.findById(id);
-  if (!category) throw new Error('Category not found');
-  if (category.userId.toString() !== userId) throw new Error('Unauthorized');
+const deleteCategory = async (id) => {
+  const result = await Category.findByIdAndDelete(id);
 
-  // 👇 fix this line:
-  await category.deleteOne();
+  return result;
 };
 
 

@@ -16,13 +16,13 @@ const signup = async (userData) => {
   return user;
 };
 
-const login = async (email, password) => {
-  const user = await User.findOne({ email });
+const login = async (userData) => {
+  const user = await User.findOne({ email:userData.email });
   if (!user) {
     throw new Error('Invalid email or password');
   }
 
-  const isMatch = await bcrypt.compare(password, user.password);
+  const isMatch = await bcrypt.compare(userData.password, user.password);
   if (!isMatch) {
     throw new Error('Invalid email or password');
   }

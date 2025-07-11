@@ -10,9 +10,13 @@ router.get('/', articleController.getAllArticles);
 router.get('/:id', articleController.getArticleById);
 
 // Protected
-router.post('/', authMiddleware, upload.single('image'), articleController.createArticle);
-router.put('/:id', authMiddleware, articleController.updateArticle);
-router.delete('/:id', authMiddleware, articleController.deleteArticle);
+// router.post('/', authMiddleware, upload.single('image'), articleController.createArticle);
+// router.put('/:id', authMiddleware, articleController.updateArticle);
+// router.delete('/:id', authMiddleware, articleController.deleteArticle);
+
+router.post('/',upload.single('image'), articleController.createArticle);
+router.put('/:id',upload.single('image'),articleController.updateArticle);
+router.delete('/:id',articleController.deleteArticle);
 
 module.exports = router;
 
