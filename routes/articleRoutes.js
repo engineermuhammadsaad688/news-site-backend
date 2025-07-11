@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const articleController = require('../controllers/articleController');
-const authMiddleware = require('../middlewares/authMiddleware');
+// const authMiddleware = require('../middlewares/authMiddleware');
 const upload = require('../middlewares/uploadMiddleware');
 
 // Public

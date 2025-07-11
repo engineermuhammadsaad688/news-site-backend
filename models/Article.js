@@ -9,7 +9,9 @@ const articleSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  image: String,
+  image: {
+    type: String,
+  },
   categoryId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Category',
