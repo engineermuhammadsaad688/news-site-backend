@@ -7,11 +7,13 @@ const createCategory = async (data) => {
 };
 
 const getAllCategories = async () => {
-  return await Category.find().populate('userId', 'name');
+ const result= await Category.find().populate('userId','name email',) ;
+ return result
 };
 
 const getCategoryById = async (id) => {
-  return await Category.findById(id).populate('userId', 'name');
+  const result=await Category.findById(id);
+  return result
 };
 
 const updateCategory = async (id,data) => {

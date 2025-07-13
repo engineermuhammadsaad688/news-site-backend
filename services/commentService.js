@@ -1,9 +1,9 @@
 const Comment = require('../models/Comment');
 
 const addComment = async (data) => {
-  const category = new Category(data);
-  await category.save();
-  return category;
+  const comment = new Comment(data);
+  await comment.save();
+  return comment;
 };
 
 const getComments = async () => {

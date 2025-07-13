@@ -5,7 +5,8 @@ const createArticle = async (req, res) => {
   try {
     const data = {
       ...req.body,
-      image:req.file.filename
+      userId: req.user.id, 
+      image: req.file.filename
     };
     const result = await articleService.createArticle(data);
     res.status(201).json(result);

@@ -26,8 +26,8 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 app.use('/api/users', userRoutes);
-app.use('/api/articles', articleRoutes);
 app.use('/api/categories', categoryRoutes);
+app.use('/api/articles', articleRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/uploads', express.static('uploads'));
 

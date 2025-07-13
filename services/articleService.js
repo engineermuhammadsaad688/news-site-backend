@@ -11,24 +11,19 @@ const getAllArticles = async () => {
   return result
 };
 
-const getArticleById = async (id) => {
-  
-  const result =await Article.findById(id).populate('userId', 'name').populate('categoryId', 'name');
-
-  return result
+ const getArticleById = async (id) => {
+ const result =await Article.findById(id).populate('userId', 'name')
+.populate('categoryId', 'name');
+ return result
 };
 
 const updateArticle = async (id,data) => {
-  
   const result = await Article.findByIdAndUpdate(id, data, { new: true });
-
   return result;
 };
 
 const deleteArticle = async (id) => {
-  
   const result = await Article.findByIdAndDelete(id);
-
   return result;
 };
 

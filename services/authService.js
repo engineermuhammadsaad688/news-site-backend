@@ -10,6 +10,7 @@ const signup = async (userData) => {
   }
 
   const hashedPassword = await bcrypt.hash(userData.password, 10);
+  
 
   const updatedUser={ ...userData, password: hashedPassword }
   
@@ -19,24 +20,24 @@ const signup = async (userData) => {
   return user;
 };
 
-const login = async (userData) => {
-  const user = await User.findOne({ email:userData.email });
-  if (!user) {
+const login = async (userDataFromFE) => {
+  const userFromDB = await User.findOne({ email:userDataFromFE.email });
+  if (!userFromDB) {
     throw new Error('Invalid email or password');
   }
 
-  const isMatch = await bcrypt.compare(userData.password, user.password);
+  const isMatch = await bcrypt.compare(userDataFromFE.password, userFromDB.password);
   if (!isMatch) {
     throw new Error('Invalid email or password');
   }
 
-  const token = jwt.sign(
-    { id: user._id, email: user.email, role: user.role },
+  const newToken = jwt.sign(
+    { id: userFromDB._id, email: userFromDB.email, role: userFromDB.role },
     process.env.JWT_SECRET,
     { expiresIn: '1d' }
   );
 
-  return { token, user };
+  return { token:newToken, user:userFromDB };
 };
 
 module.exports = {

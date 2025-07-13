@@ -18,6 +18,7 @@ const login = async (req, res) => {
     const data = {
       ...req.body,
     };
+
     const result = await authService.login(data);
     res.status(200).json(result);
   } catch (err) {
