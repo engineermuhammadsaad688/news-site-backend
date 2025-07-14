@@ -29,7 +29,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/api/articles', articleRoutes);
 app.use('/api/comments', commentRoutes);
-app.use('/uploads', express.static('uploads'));
+app.use('/api/uploads', express.static('uploads'));
 
 
 

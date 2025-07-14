@@ -7,11 +7,11 @@ const addComment = async (data) => {
 };
 
 const getComments = async () => {
-  return await Category.find().populate('userId', 'name');
+  return await Comment.find().populate('userId', 'name');
 };
 
 const updateComment = async (id,data) => {
-  const result = await Category.findByIdAndUpdate(id, data, { new: true });
+  const result = await Comment.findByIdAndUpdate(id, data, { new: true });
   return result;
 };
 

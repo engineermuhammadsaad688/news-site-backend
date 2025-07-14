@@ -7,7 +7,7 @@ const createArticle = async (data) => {
 };
 
 const getAllArticles = async () => {
-  const result =await Article.find();
+  const result =await Article.find().populate('categoryId','name');
   return result
 };
 

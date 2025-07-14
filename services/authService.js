@@ -40,7 +40,13 @@ const login = async (userDataFromFE) => {
   return { token:newToken, user:userFromDB };
 };
 
+const getAllUsers = async () => {
+ const result= await User.find();
+ return result
+};
+
 module.exports = {
   signup,
-  login
+  login,
+  getAllUsers
 };

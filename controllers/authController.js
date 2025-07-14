@@ -26,7 +26,17 @@ const login = async (req, res) => {
   }
 };
 
+const getAllUsers = async (req, res) => {
+  try {
+    const result = await authService.getAllUsers();
+    res.json(result); 
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
 module.exports = {
   signup,
-  login
+  login,
+  getAllUsers
 };
