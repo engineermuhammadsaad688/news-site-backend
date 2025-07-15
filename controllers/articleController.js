@@ -16,14 +16,25 @@ const createArticle = async (req, res) => {
 };
 
 
+// const getAllArticles = async (req, res) => {
+//   try {
+//     const result = await articleService.getAllArticles();
+//     res.json(result);
+//   } catch (err) {
+//     res.status(500).json({ error: err.message });
+//   } 
+// };
 const getAllArticles = async (req, res) => {
   try {
-    const result = await articleService.getAllArticles();
+    const data = {...req.query };
+
+    const result = await articleService.getAllArticles(data);
     res.json(result);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
+
 
 const getArticleById = async (req, res) => {
   try {
