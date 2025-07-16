@@ -14,8 +14,9 @@ const createArticle = async (data) => {
 
 const getAllArticles = async (data) => {
   const {
-    search = '',
-    category,
+    search = null,
+    category=null,
+    user=null,
     sortBy = 'createdAt',
     order = 'desc'
   } = data;
@@ -34,6 +35,10 @@ const getAllArticles = async (data) => {
 
   if (category) {
     query.categoryId = category;
+  }
+
+  if (user) {
+    query.userId = user;
   }
 
   const skip = (page - 1) * limit;

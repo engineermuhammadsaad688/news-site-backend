@@ -27,7 +27,7 @@ const createArticle = async (req, res) => {
 const getAllArticles = async (req, res) => {
   try {
     const data = {...req.query };
-
+    
     const result = await articleService.getAllArticles(data);
     res.json(result);
   } catch (err) {
