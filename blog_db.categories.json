@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "6874e8c28993f28a54027550"
+  },
+  "name": "politics",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+  "userId": {
+    "$oid": "6874e8478993f28a54027541"
+  },
+  "createdAt": {
+    "$date": "2025-07-14T11:23:46.335Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-16T09:08:56.029Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6874e8cd8993f28a54027554"
+  },
+  "name": "sports",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+  "userId": {
+    "$oid": "6874e8478993f28a54027541"
+  },
+  "createdAt": {
+    "$date": "2025-07-14T11:23:57.705Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-16T09:08:49.014Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68776c0bbb5a2f0e8ca03747"
+  },
+  "name": "Education",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+  "userId": {
+    "$oid": "6874e8368993f28a5402753e"
+  },
+  "createdAt": {
+    "$date": "2025-07-16T09:08:27.280Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-16T09:08:27.280Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68776c1abb5a2f0e8ca0374b"
+  },
+  "name": "Entertainment",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+  "userId": {
+    "$oid": "6874e8368993f28a5402753e"
+  },
+  "createdAt": {
+    "$date": "2025-07-16T09:08:42.377Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-16T09:08:42.377Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68776c46bb5a2f0e8ca03755"
+  },
+  "name": "Envoirnment",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+  "userId": {
+    "$oid": "6874e8368993f28a5402753e"
+  },
+  "createdAt": {
+    "$date": "2025-07-16T09:09:26.482Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-16T09:09:26.482Z"
+  },
+  "__v": 0
+}]

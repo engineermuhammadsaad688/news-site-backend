@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6874e8368993f28a5402753e"
+  },
+  "name": "ali",
+  "email": "ali@gmail.com",
+  "password": "$2b$10$uFisZDu8fwbvtAmCKmkbpuFKg3Ji0OWuyTMQMYvD3N.3nzW/PrGKG",
+  "role": "User",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6874e8478993f28a54027541"
+  },
+  "name": "saad",
+  "email": "saad@gmail.com",
+  "password": "$2b$10$YcyZ/m.KjGnzba//g2dwBu8n5A2pOW2a543yFM/zS.j0MNn8fziby",
+  "role": "User",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6874e85b8993f28a54027544"
+  },
+  "name": "talha",
+  "email": "talha@gmail.com",
+  "password": "$2b$10$RioZhoZA7N5r9Xspq5Zln.zNAfoVdwvJewwzMxusli/u2YZoKvDpO",
+  "role": "User",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6874e8738993f28a54027547"
+  },
+  "name": "hanzala",
+  "email": "hanzala@gmail.com",
+  "password": "$2b$10$ouU3fDzz6VcUbNAr/.Oxse9Ab2E7n3.K0V6LB/N0oG/84LXrkV60u",
+  "role": "User",
+  "__v": 0
+}]

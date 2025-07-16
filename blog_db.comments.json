@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "6874eb356951ec28989f7713"
+  },
+  "comment": "first comment",
+  "status": "pending",
+  "userId": {
+    "$oid": "6874e8368993f28a5402753e"
+  },
+  "articleId": {
+    "$oid": "6874e92b8993f28a54027562"
+  },
+  "createdAt": {
+    "$date": "2025-07-14T11:34:13.167Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-14T11:34:13.167Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6874eb6b6951ec28989f772a"
+  },
+  "comment": "second comment",
+  "status": "pending",
+  "userId": {
+    "$oid": "6874e85b8993f28a54027544"
+  },
+  "articleId": {
+    "$oid": "6874e92b8993f28a54027562"
+  },
+  "createdAt": {
+    "$date": "2025-07-14T11:35:07.032Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-14T11:35:07.032Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6876074e30c4c4dc96bf2c88"
+  },
+  "comment": "third comment",
+  "status": "pending",
+  "userId": {
+    "$oid": "6874e85b8993f28a54027544"
+  },
+  "articleId": {
+    "$oid": "6874e92b8993f28a54027562"
+  },
+  "createdAt": {
+    "$date": "2025-07-15T07:46:22.570Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-15T07:46:22.570Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6876075830c4c4dc96bf2c8c"
+  },
+  "comment": "fourth comment",
+  "status": "pending",
+  "userId": {
+    "$oid": "6874e85b8993f28a54027544"
+  },
+  "articleId": {
+    "$oid": "6874e92b8993f28a54027562"
+  },
+  "createdAt": {
+    "$date": "2025-07-15T07:46:32.497Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-15T07:46:32.497Z"
+  },
+  "__v": 0
+}]
