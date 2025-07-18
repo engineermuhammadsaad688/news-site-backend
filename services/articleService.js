@@ -18,11 +18,12 @@ const getAllArticles = async (data) => {
     category=null,
     user=null,
     sortBy = 'createdAt',
-    order = 'desc'
+    order = 'desc',
+    page = Number(data.page) || 1,
+    limit = Number(data.limit) || 10
   } = data;
 
-  const page = Number(data.page) || 1;
-  const limit = Number(data.limit) || 10;
+
 
   const query = {};
 
